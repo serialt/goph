@@ -1,7 +1,7 @@
 <div align="center">
 	<h1>Golang SSH Client.</h1>
-	<a href="https://github.com/melbahja/goph">
-		<img src="https://github.com/melbahja/goph/raw/master/.github/goph.png" width="200">
+	<a href="https://github.com/serialt/goph">
+		<img src="https://github.com/serialt/goph/raw/master/.github/goph.png" width="200">
 	</a>
 	<h4 align="center">
 		Fast and easy golang ssh client module.
@@ -21,10 +21,10 @@
 ## 🚀&nbsp; Installation and Documentation
 
 ```bash
-go get github.com/melbahja/goph
+go get github.com/serialt/goph
 ```
 
-You can find the docs at [go docs](https://pkg.go.dev/github.com/melbahja/goph).
+You can find the docs at [go docs](https://pkg.go.dev/github.com/serialt/goph).
 
 ## 🤘&nbsp; Features
 
@@ -49,7 +49,7 @@ package main
 import (
 	"log"
 	"fmt"
-	"github.com/melbahja/goph"
+	"github.com/serialt/goph"
 )
 
 func main() {
@@ -60,7 +60,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	client, err := goph.New("root", "192.1.1.3", auth)
+	client, err := goph.New("root", "192.1.1.3", 22, auth)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -87,12 +87,12 @@ if err != nil {
 	// handle error
 }
 
-client, err := goph.New("root", "192.1.1.3", auth)
+client, err := goph.New("root", "192.1.1.3", 22, auth)
 ```
 
 #### 🔑 Start Connection With Password:
 ```go
-client, err := goph.New("root", "192.1.1.3", goph.Password("you_password_here"))
+client, err := goph.New("root", "192.1.1.3", 22, goph.Password("you_password_here"))
 ```
 
 #### ☛ Start Connection With SSH Agent (Unix systems only):
@@ -102,7 +102,7 @@ if err != nil {
 	// handle error
 }
 
-client, err := goph.New("root", "192.1.1.3", auth)
+client, err := goph.New("root", "192.1.1.3", 22, auth)
 ```
 
 #### ⤴️ Upload Local File to Remote:
@@ -187,4 +187,4 @@ Feel free to open a new issue, or contact me.
 
 ## 📘&nbsp; License
 
-Goph is provided under the [MIT License](https://github.com/melbahja/goph/blob/master/LICENSE).
+Goph is provided under the [MIT License](https://github.com/serialt/goph/blob/master/LICENSE).
