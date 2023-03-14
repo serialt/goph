@@ -1,6 +1,6 @@
 module github.com/serialt/goph
 
-go 1.19
+go 1.18
 
 require (
 	github.com/pkg/errors v0.9.1
@@ -10,7 +10,7 @@ require (
 
 require (
 	github.com/kr/fs v0.1.0 // indirect
-	golang.org/x/sys v0.1.0 // indirect
-	golang.org/x/term v0.1.0 // indirect
+	golang.org/x/sys v0.5.0 // indirect
+	golang.org/x/term v0.5.0 // indirect
 
 )
